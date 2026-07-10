@@ -23,7 +23,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-primary bg-cover bg-center md:bg-fixed"
+        className="relative min-h-[100dvh] pt-32 pb-20 flex items-center justify-center overflow-hidden bg-primary bg-cover bg-center"
         style={{ 
           backgroundImage: 'linear-gradient(rgba(13, 71, 161, 0.85), rgba(13, 71, 161, 0.95)), url("https://i.ibb.co/W4K6Fnd0/d32b124d6110e159fd388871de0bfe06.jpg")',
         }}
@@ -35,33 +35,45 @@ export default function Home() {
           <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-white rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
         
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto flex flex-col items-center">
+          <motion.h1 
+            className="order-1 md:order-2 text-5xl md:text-7xl font-bold text-white leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Excel International School
+          </motion.h1>
+
           <motion.span 
-            className="inline-block py-1 px-3 rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/20 text-sm font-medium mb-10 uppercase tracking-wider"
+            className="order-2 md:order-1 mt-8 md:mt-0 mb-6 md:mb-10 inline-block py-1 px-3 rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/20 text-sm font-medium uppercase tracking-wider"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Welcome to Excel
           </motion.span>
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+
+          <motion.h2 
+            className="order-3 text-2xl md:text-3xl font-semibold text-secondary mt-4 md:mt-6 mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Raising Future Leaders Through <span className="text-secondary">Excellence</span>
-          </motion.h1>
+            Raising Future Leaders Through Excellence
+          </motion.h2>
+
           <motion.p 
-            className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto font-light"
+            className="order-4 text-xl md:text-2xl text-blue-100 mt-2 mb-10 max-w-3xl mx-auto font-light"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             A premium educational institution in Benin City, dedicated to nurturing academic brilliance and strong moral character.
           </motion.p>
+
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="order-5 flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -74,7 +86,7 @@ export default function Home() {
             </Link>
             <Link 
               to="/contact" 
-              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 flex items-center justify-center"
             >
               Contact Us
             </Link>
@@ -83,7 +95,7 @@ export default function Home() {
         
         {/* Scroll Indicator */}
         <motion.div 
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 hidden md:block"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
