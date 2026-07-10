@@ -36,7 +36,7 @@ export default function Navbar() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const navClass = `fixed w-full z-50 transition-all duration-300 ${
+  const navClass = `absolute w-full z-50 transition-all duration-300 ${
     isScrolled || !isHome ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
   }`;
 
