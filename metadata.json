@@ -1,0 +1,6 @@
+{
+  "name": "Excel International School",
+  "description": "Premium educational website for Excel International School, Benin City, Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
