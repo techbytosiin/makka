@@ -160,10 +160,12 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-gray-100">
-                {/* Image Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
-                  <span className="font-medium text-lg">Principal's Portrait</span>
-                </div>
+                <img 
+                  src="https://i.ibb.co/HD4XT4Gj/Whats-App-Image-2026-04-10-at-4-13-08-PM-removebg-preview-1-1-1.png"
+                  alt="Principal of Excel International School"
+                  className="w-full h-full object-cover object-top"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl z-0"></div>
