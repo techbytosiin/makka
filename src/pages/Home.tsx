@@ -23,12 +23,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-primary"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-primary bg-cover bg-center md:bg-fixed"
         style={{ 
           backgroundImage: 'linear-gradient(rgba(13, 71, 161, 0.85), rgba(13, 71, 161, 0.95)), url("https://i.ibb.co/W4K6Fnd0/d32b124d6110e159fd388871de0bfe06.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
         }}
       >
         {/* Abstract Background Elements */}
@@ -40,7 +37,7 @@ export default function Home() {
         
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           <motion.span 
-            className="inline-block py-1 px-3 rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/20 text-sm font-medium mb-6 uppercase tracking-wider"
+            className="inline-block py-1 px-3 rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/20 text-sm font-medium mb-10 uppercase tracking-wider"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

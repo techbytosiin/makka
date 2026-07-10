@@ -62,17 +62,16 @@ export default function Gallery() {
               )}
 
               {/* Grid */}
-              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
                 <AnimatePresence>
                   {filteredImages.map((img) => (
                     <motion.div
                       key={img.id}
-                      layout
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
                       transition={{ duration: 0.3 }}
-                      className="relative group rounded-xl overflow-hidden cursor-pointer break-inside-avoid bg-gray-200"
+                      className="relative group rounded-xl overflow-hidden cursor-pointer break-inside-avoid bg-gray-200 mb-6"
                       onClick={() => setSelectedImage(img)}
                     >
                       <img 
